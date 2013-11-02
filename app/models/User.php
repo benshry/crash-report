@@ -13,7 +13,6 @@ class User extends Eloquent {
     }
 
     public static function authenticate($username, $password) {
-
         $user = self::where('username', '=', $username)->first();
         if ($user === null) {
             return false;

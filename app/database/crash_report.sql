@@ -97,7 +97,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,1,'rbowden91','$1$5x2Xbm.s$srIIO/ECFCXWEd7zJCMdv.','Rob Bowden','23','rob@cs.harvard.edu','973-459-0732');
+INSERT INTO `users` VALUES (1,1,'rbowden91','$1$sHD9kJLx$1/0Rmj0I1.BNhF8mrjBbg.','Rob Bowden','23','rob@cs.harvard.edu','973-459-0732');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-11-02 17:15:36
+-- Dump completed on 2013-11-02 17:50:46
