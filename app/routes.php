@@ -1,7 +1,7 @@
 <?php
 
 // HomeController
-Route::get('/landing', 'HomeController@landing');
+Route::get('/', 'HomeController@index');
 
 // AuthController
 Route::get('/login', 'AuthController@login');

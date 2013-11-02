@@ -5,12 +5,12 @@
     <body>
         @include('templates.header')
         <div id="middle">
-            <form id="form-login">
-                    <h2>Log In</h2>
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <button type="submit" class="btn">Log In</button>
-            </form>
+            <div class="option">
+                <h1>Add a new crash report</h1>
+            </div>
+            <div class="option">
+                <h1>Browse past crash reports</h1>
+            </div>
         </div>
     <body>
 </html>
