@@ -17,7 +17,11 @@
                             value="{{{ $username }}}"
                         @endif
                     >
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password"
+                        @if (isset($username))
+                            autofocus
+                        @endif
+                    >
                     <button type="submit" class="btn">Log In</button>
             </form>
         </div>
