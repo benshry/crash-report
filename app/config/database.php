@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'market50',
+			'database'  => 'crash_report',
 			'username'  => 'jharvard',
 			'password'  => 'crimson',
 			'charset'   => 'utf8',

@@ -2,7 +2,7 @@
 
 class HomeController extends BaseController {
 
-	public function index()
+    public function index()
     {
         if (Session::has('user')) {
             return View::make('index', [
@@ -10,7 +10,7 @@ class HomeController extends BaseController {
             ]);
         }
         else {
-            return View::make('login');
+            return View::make('login', Session::all());
         }
     }
 }

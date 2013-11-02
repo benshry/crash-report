@@ -4,10 +4,19 @@
     @include('templates.head')
     <body>
         @include('templates.header')
+        @if (isset($error))
+            <div class="alert alert-danger">
+                {{ $error }}
+            </div>
+        @endif
         <div id="middle">
-            <form id="form-login">
+            <form id="form-login" action="/login" method="post">
                     <h2>Log In</h2>
-                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Username" name="username"
+                        @if (isset($username))
+                            value="{{{ $username }}}"
+                        @endif
+                    >
                     <input type="password" placeholder="Password">
                     <button type="submit" class="btn">Log In</button>
             </form>
