@@ -2,9 +2,9 @@
 
 class HomeController extends BaseController {
 
-	public function index()
+	public function landing()
 	{
-        return View::make('index');
+        return View::make('landing');
 	}
 
 }
