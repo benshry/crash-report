@@ -17,11 +17,13 @@ class Base extends Migration {
                 $table->string('case');
                 $table->string('description', 8191);
                 $table->string('damage', 8191);
+                $table->string('car_damage');
                 $table->string('location');
                 $table->string('department');
                 $table->string('municipality');
                 $table->string('officer_name');
                 $table->string('badge_number');
+                $table->string('map_data', 2048);
                 $table->integer('injured')->nullable();
                 $table->integer('killed')->nullable();
                 $table->date('date');

@@ -13,13 +13,32 @@ class CrashController extends BaseController {
         $this->jsonSuccess();
     }
 
+    public function getAll()
+    {
+        $crashes = Crash::all();
+
+        $this->jsonSuccess(array('crashes' => $crashes->toArray()));
+    }
+
+    public function set()
+    {
+        Session::put('crash_id', Input::get('crash_id'));
+
+        $this->jsonSuccess();
+    }
+
     public function get()
     {
         if (Session::has('crash_id') === false) {
             return Redirect::to('/');
         }
 
-        $this->jsonSuccess((array)Crash::find(Session::get('crash_id'))->toArray());
+        $crash = Crash::find(Session::get('crash_id'));
+        if ($crash === null) {
+            return Redirect::to('/');
+        }
+
+        $this->jsonSuccess($crash->toArray());
     }
 
     public function update()

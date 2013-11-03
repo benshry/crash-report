@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="modal-label-crashdiagram">Crash Diagram</h4>
       </div>
       <div class="modal-body">
-        <div id="map-canvas" style="height:100%"></div>
+        <div id="map-canvas"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

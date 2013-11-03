@@ -9,7 +9,6 @@
                 @include('templates.page-browse')
             </div>
         </div>
-        <!--<div id="map-canvas" style="height:100%"></div>-->
         <!--<div id="webcam" style="height:500px"></div>-->
         @include('templates.modal-crashinfo')
         @include('templates.modal-cardamage')
