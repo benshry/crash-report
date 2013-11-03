@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-
 <html>
     @include('templates.head')
     <body>
-        @include('templates.header')
-        <div id="middle">
-            <div class="option">
-                <h1>Add a new crash report</h1>
-            </div>
-            <div class="option">
-                <h1>Browse past crash reports</h1>
+        <div id="wrapper">
+            <div id="container">
+                @include('templates.page-landing')
+                @include('templates.page-add')
+                @include('templates.page-browse')
             </div>
         </div>
     <body>
