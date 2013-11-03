@@ -11,6 +11,7 @@
                 <h1>Browse past crash reports</h1>
             </div>
         </div>
-        <div id="map-canvas" style="height:100%"></div>
+        <!--<div id="map-canvas" style="height:100%"></div>-->
+        <div id="webcam" style="height:500px"></div>
     <body>
 </html>
