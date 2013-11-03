@@ -9,5 +9,6 @@
                 @include('templates.page-browse')
             </div>
         </div>
+        <div id="map-canvas" style="height:100%"></div>
     <body>
 </html>
