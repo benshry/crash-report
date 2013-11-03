@@ -16,5 +16,5 @@ Route::post('/crash/set', 'CrashController@set');
 Route::get('/crashes', 'CrashController@getAll');
 Route::post('/crash/update', 'CrashController@update');
 Route::post('/crash/new', 'CrashController@create');
-
+Route::get('/crash/pdf', 'CrashController@pdf');
 ?>

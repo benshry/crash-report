@@ -11,15 +11,22 @@
         <div class="option" class="btn" data-toggle="modal" href="#modal-cardamage">
             <h1>Car Damage</h1>
             <div class="option-body">
-                <img src="/img/icon-damage-horiz.jpg">
+                <!-- <img src="/img/icon&#45;damage&#45;horiz.jpg"> -->
+                <img src="/img/icon-cardamage2.png">
             </div>
         </div>
-        <div class="option" class="btn" data-toggle="modal" href="#modal-crashinfo">
+        <div class="option" class="btn" id="crash-info" data-toggle="modal" href="#modal-crashinfo">
             <h1>Crash Information</h1>
             <div class="option-body">
                 <img src="/img/icon-crash.jpg">
             </div>
         </div>
+        <!--
+          <div id="pdf" style="display:inline-block">
+              <div><a href="/crash/pdf">Download as PDF</a></div>
+              <div><a>View as PDF</a></div>
+          </div>
+        -->
     </div>
     <div class="row" id="plus">
         <div class="option vehicle" id="option-add-vehicle" data-vehicle-num="1">

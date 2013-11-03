@@ -104,6 +104,12 @@ $(function() {
         });
     });
 
+    $('#pdf').on('click', '#pdf-view', function() {
+        $.get('/crash/pdf', function(data) {
+            console.log(data);
+        });
+    });
+
     $('body').on('click', '.option', function() {
         var modal = $(this).attr('href');
         $(modal).css('z-index', '1050')
