@@ -7,6 +7,7 @@
     {{ HTML::script('/js/bootstrap.min.js') }}
     {{ HTML::script('/js/index.js') }}
     {{ HTML::script('/js/map.js') }}
+    {{ HTML::script('/js/cam.js') }}
     {{ HTML::script('/js/scriptcam/scriptcam.js') }}
     <title>Crashr</title>
 </head>

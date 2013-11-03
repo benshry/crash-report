@@ -7,4 +7,7 @@ Route::get('/', 'HomeController@index');
 Route::post('/login', 'AuthController@login');
 Route::get('/logout', 'AuthController@logout');
 
+// BarcodeController
+Route::post('/decode', 'BarcodeController@decode');
+
 ?>

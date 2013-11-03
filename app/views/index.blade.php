@@ -10,6 +10,6 @@
             </div>
         </div>
         <!--<div id="map-canvas" style="height:100%"></div>-->
-        <div id="webcam" style="height:500px"></div>
+        <!--<div id="webcam" style="height:500px"></div>-->
     <body>
 </html>
