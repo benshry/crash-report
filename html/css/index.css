@@ -2,13 +2,20 @@
  * Base #1240AB
  * Lighter #4671D5
  */
+/*
+ * Resources Consulted
+ * 1. http://stackoverflow.com/questions/5564835/preventing-horizontal-scrolling-after-a-certain-width
+ */
+/* 1 */
 html {
   overflow: auto; }
 
+/* 1 */
 body {
   min-width: 960px;
   overflow: hidden; }
 
+/* 1 */
 #wrapper {
   margin: 0 auto;
   position: relative; }
@@ -44,7 +51,8 @@ body {
   width: 33.33%; }
 
 #landing {
-  margin-left: 0px; }
+  margin-left: 0px;
+  top: -344px; }
 
 #add {
   margin-left: 0px;
@@ -52,7 +60,7 @@ body {
 
 #browse {
   margin-left: 66.66%;
-  top: -272px; }
+  top: -616px; }
 
 #landing, #add, #browse {
   text-align: center; }
@@ -74,3 +82,23 @@ body {
       background-color: #4671D5; }
     #landing .option .option-body img, #add .option .option-body img, #browse .option .option-body img {
       width: 80px; }
+
+#plus img {
+  width: 50px; }
+#plus .option {
+  vertical-align: middle; }
+
+/*
+ * CRASH MODAL STYLINGS
+ */
+#crash-description {
+  width: 450px; }
+
+#crash-damage {
+  width: 450px; }
+
+#crash-injured {
+  width: 75px; }
+
+#crash-killed {
+  width: 75px; }

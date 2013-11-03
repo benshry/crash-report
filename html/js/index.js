@@ -9,4 +9,8 @@ $(function() {
         $('#container').css('margin-left', margin + "%");
     });
 
+    /*
+     * APP PAGE EVENT HANDLERS
+     */
+
 });
