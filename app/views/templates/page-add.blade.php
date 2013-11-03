@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="row" id="plus">
-        <div class="option">
+        <div class="option" id="option-add-vehicle" data-vehicle-num="1">
             <h1>Vehicle 1</h1>
             <div class="option-body">
                 Add Vehicle Icon
