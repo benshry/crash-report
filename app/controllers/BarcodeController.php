@@ -18,7 +18,7 @@ class BarcodeController extends BaseController {
         exec("java -cp {$this->path}/javase-2.2.jar:{$this->path}/core-2.2.jar com.google.zxing.client.j2se.CommandLineRunner $filename", $output);
 
         $xml = simplexml_load_string($this->toXML($output));
-        echo json_encode($xml);
+        $this->jsonSuccess($xml);
     }
 
     private function toXML($aamva)
