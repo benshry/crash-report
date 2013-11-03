@@ -12,5 +12,6 @@
         @include('templates.modal-crashinfo')
         @include('templates.modal-cardamage')
         @include('templates.modal-crashdiagram')
+        <div id="webcam" style="height:500px"></div>
     <body>
 </html>

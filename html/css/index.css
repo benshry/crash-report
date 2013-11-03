@@ -39,6 +39,13 @@ body {
   padding: 10px;
   text-align: center; }
 
+#mapCanvas img {
+  max-width: none; }
+
+#mapCanvas label {
+  width: auto;
+  display: inline; }
+
 /*
  * LANDING PAGE STYLING
  */
