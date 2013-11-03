@@ -27,13 +27,13 @@
                 Add Vehicle Icon
             </div>
         </div>
-        <img src="/img/icon-plus.png">
+        <img id="plus-img" src="/img/icon-plus.png">
     </div>
     <div class="row">
-        <div class="option">
+        <div class="option" class="btn" data-toggle="modal" href="#modal-officer">
             <h1>Officer/Department</h1>
             <div class="option-body">
-                Add Person Icon
+                <img src="/img/icon-police.jpg">
             </div>
         </div>
     </div>

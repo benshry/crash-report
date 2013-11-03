@@ -12,5 +12,7 @@ $(function() {
     /*
      * APP PAGE EVENT HANDLERS
      */
+    $('#plus').on('click', '#plus-img', function() {
+    });
 
 });

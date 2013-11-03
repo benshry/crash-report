@@ -116,12 +116,14 @@ body{
 }
 
 #plus {
-    img {
-        width: 50px;
-    }
     .option {
         vertical-align: middle;
     }
+}
+
+img#plus-img {
+    width: 50px;
+    display: inline-block;
 }
 
 /*

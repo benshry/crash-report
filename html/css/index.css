@@ -90,10 +90,12 @@ body {
     #landing .option .option-body img, #add .option .option-body img, #browse .option .option-body img {
       width: 80px; }
 
-#plus img {
-  width: 50px; }
 #plus .option {
   vertical-align: middle; }
+
+img#plus-img {
+  width: 50px;
+  display: inline-block; }
 
 /*
  * CRASH MODAL STYLINGS
