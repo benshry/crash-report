@@ -54,6 +54,8 @@ class Base extends Migration {
                 $table->string('hash');
                 $table->string('name');
                 $table->string('badge');
+                $table->string('department');
+                $table->string('municipality');
                 $table->string('email');
                 $table->string('phone');
                 $table->timestamps();

@@ -16,6 +16,7 @@
         <input class="vehicle-updater" name="owner_zip" type="text" placeholder="Zip">
         <input class="vehicle-updater" name="insurance_policy" type="text" placeholder="Insurance Policy">
         <input class="vehicle-updater" name="insurance_code" type="text" placeholder="Insurance Code">
+        <button class="copy-from-driver">Copy Information from Driver</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

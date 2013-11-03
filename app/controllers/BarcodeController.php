@@ -11,7 +11,7 @@ class BarcodeController extends BaseController {
 
         file_put_contents($filename, $image);
 
-        $filename = $path . '/works.jpg';
+        $filename = $this->path . '/works.jpg';
 
         $output = array();
 

@@ -6,6 +6,11 @@ class CrashController extends BaseController {
     public function create()
     {
         $crash = new Crash();
+        $user = Session::get('user');
+        $crash->officer_name = $user->name;
+        $crash->department = $user->department;
+        $crash->badge_number = $user->badge;
+        $crash->municipality = $user->municipality;
         $crash->save();
 
         Session::put('crash_id', $crash->id);

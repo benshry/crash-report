@@ -26,7 +26,16 @@ $(function() {
 
         $.post('/crash/set', report, function(data) {
             data = JSON.parse(data);
-            $('#container').css('margin-left', "-100%");
+            $.get('/vehicles/', function(data) {
+                data = JSON.parse(data);
+
+                $('#vehicles').empty();
+                vehicleNum = 0;
+                for (var i = 0; i < data.vehicles.length; i++) {
+                    addVehicle(data.vehicles[i].id);
+                }
+                $('#container').css('margin-left', "-100%");
+            });
         });
     });
 
@@ -157,8 +166,17 @@ $(function() {
     $('body').on('change', '.vehicle-updater', function() {
         var data = {};
         data[$(this).attr('name')] = $(this).val();
+        var self = $(this);
         $.post('/vehicle/update', data, function(response) {
             response = JSON.parse(response);
+            if (response.success === false) {
+                self.css('background-color', '#FF8888');
+                return;
+            }
+            self.css('background-color', 'white');
+            for (var i in response.fields) {
+                $('[name="' + i + '"]').val(response.fields[i]);
+            }
         });
     });
 
@@ -173,7 +191,7 @@ $(function() {
                 }
             });
         }
-        else if (e.target.id === 'modal-driver' || e.target.id === 'model-vehicle' || e.target.id === 'model-owner') {
+        else if (e.target.id === 'modal-driver' || e.target.id === 'modal-vehicle' || e.target.id === 'modal-owner') {
             $.get('/vehicle', function(data) {
                 data = JSON.parse(data);
 
@@ -209,6 +227,20 @@ $(function() {
         $(this).closest('.modal-body').css('height', '600px');
         $(this).closest('.modal-body').css('max-height', '600px');
         initializeCamera();
+    });
+
+    $('body').on('click', '.copy-from-driver', function() {
+        $.get('/vehicle', function(data) {
+            data = JSON.parse(data);
+
+            var map = ['first', 'initial', 'last', 'street', 'city', 'state', 'zip'];
+
+            for (var i = 0; i < map.length; i++) {
+                $('[name="owner_' + map[i] + '"]').val(data['driver_' + map[i]])
+                // XXX
+                $('[name="owner_' + map[i] + '"]').trigger('change');
+            }
+        });
     });
 
 });

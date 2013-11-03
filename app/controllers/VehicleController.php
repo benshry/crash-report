@@ -58,12 +58,26 @@ class VehicleController extends BaseController {
         }
 
         $data = Input::all();
+        $fields = array();
+
+        if (isset($data['vin'])) {
+            $vin = VIN::where('vin', '=', $data['vin'])->first();
+            if ($vin === null) {
+                $this->jsonFailure();
+            }
+            $data['model'] = $vin->model;
+            $data['make'] = $vin->make;
+            $data['year'] = $vin->year;
+            $fields['model'] = $vin->model;
+            $fields['make'] = $vin->make;
+            $fields['year'] = $vin->year;
+        }
         unset($data['id']);
         unset($data['crash_id']);
 
         Vehicle::where('id', '=', Session::get('vehicle_id'))->update($data);
 
-        $this->jsonSuccess();
+        $this->jsonSuccess(array('fields' => $fields));
     }
 }
 

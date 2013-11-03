@@ -29,6 +29,8 @@ class UserTableSeeder extends Seeder {
             'hash' => '$1$sHD9kJLx$1/0Rmj0I1.BNhF8mrjBbg.',
             'name' => 'Rob Bowden',
             'badge' => '23',
+            'department' => 'Fairfield',
+            'municipality' => '0707',
             'email' => 'rob@cs.harvard.edu',
             'phone' => '973-459-0732'
         ));
