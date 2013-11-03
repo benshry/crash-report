@@ -2,6 +2,17 @@
  * Base #1240AB
  * Lighter #4671D5
  */
+html {
+  overflow: auto; }
+
+body {
+  min-width: 960px;
+  overflow: hidden; }
+
+#wrapper {
+  margin: 0 auto;
+  position: relative; }
+
 #top {
   height: 100px;
   background-color: #1240AB;
@@ -13,7 +24,7 @@
     text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5); }
 
 /*
- * LANDING PAGE STYLING
+ * LOGIN PAGE STYLING
  */
 #form-login {
   width: 250px;
@@ -31,3 +42,42 @@
 /*
  * LANDING PAGE STYLING
  */
+#container {
+  width: 300%; }
+
+.page {
+  position: relative;
+  display: inline-block;
+  width: 33.33%; }
+
+#landing {
+  margin-left: 0px; }
+
+#add {
+  margin-left: 0px;
+  left: -4px; }
+
+#browse {
+  margin-left: 66.66%;
+  top: -272px; }
+
+#landing, #add, #browse {
+  text-align: center; }
+  #landing .option, #add .option, #browse .option {
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+    border: thin solid black;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    vertical-align: top;
+    cursor: pointer; }
+    #landing .option h1, #add .option h1, #browse .option h1 {
+      font-size: 18px;
+      color: white;
+      text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+      margin-top: 0px;
+      background-color: #4671D5; }
+    #landing .option .option-body img, #add .option .option-body img, #browse .option .option-body img {
+      width: 80px; }
