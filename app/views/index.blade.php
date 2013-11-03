@@ -11,6 +11,6 @@
         </div>
         @include('templates.modal-crashinfo')
         @include('templates.modal-cardamage')
-        <div id="map-canvas" style="height:100%"></div>
+        @include('templates.modal-crashdiagram')
     <body>
 </html>

@@ -1,7 +1,7 @@
 <div class="page" id="add">
     @include('templates.header')
     <div class="row">
-        <div class="option">
+        <div class="option" class="btn" data-toggle="modal" href="#modal-crashdiagram">
             <h1>Crash Diagram</h1>
             <div class="option-body">
                 <img src="/img/icon-map.jpg">
