@@ -29,6 +29,7 @@ body{
     height: 100px;
     background-color: #1240AB;
     text-align: center;
+    margin-bottom: 10px;
 
     h1 {
         margin-top: 0px;
@@ -121,6 +122,12 @@ body{
                 width: 80px;
             }
         }
+    }
+}
+
+#crash-info {
+    img {
+        width: 120px;
     }
 }
 

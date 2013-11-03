@@ -25,4 +25,5 @@ Route::post('/vehicle/update', 'VehicleController@update');
 Route::post('/vehicle/delete', 'VehicleController@delete');
 Route::post('/vehicle/new', 'VehicleController@create');
 
+Route::get('/crash/pdf', 'CrashController@pdf');
 ?>

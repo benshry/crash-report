@@ -58,6 +58,29 @@ class CrashController extends BaseController {
 
         $this->jsonSuccess();
     }
+
+    public function pdf()
+    {
+        require('../lib/fpdf17/fpdf.php');
+
+        $pdf = new FPDF();
+        $pdf->AddPage();
+        $pdf->SetFont('Arial', '', 7);
+        $pdf->Cell(25, 10, 'Page ____ of ____');
+        $pdf->Cell(15, 10, ' ____ Fatal');
+
+        $pdf->SetFont('Arial', 'B', 9);
+        $pdf->Cell(77, 10, 'Massachusetts Police Crash Investigation Report');
+
+        $pdf->SetFont('Arial', '', 7);
+        $pdf->Cell(20, 10, '__ Reportable');
+        $pdf->Cell(24, 10, '__ Non-Reportable');
+        $pdf->Cell(20, 10, '__ Change Report');
+
+        $pdf->Output('report.pdf');
+
+        return Redirect::to('/');
+    }
 }
 
 ?>

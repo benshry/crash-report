@@ -62,7 +62,7 @@ $(function() {
                         <div class="option" data-report="' + (i+1) + '">\
                             <h1>Report ' + (i + 1) + '</h1>\
                             <div class="option-body">\
-                                Report Icon\
+                                <img src="/img/icon-document.png">\
                             </div>\
                         </div>');
                 }
@@ -132,6 +132,12 @@ $(function() {
         });
 
         $.post('/crash/update', { car_damage: JSON.stringify(state) }, function(data) {
+        });
+    });
+
+    $('#pdf').on('click', '#pdf-view', function() {
+        $.get('/crash/pdf', function(data) {
+            console.log(data);
         });
     });
 
