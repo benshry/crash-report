@@ -38,6 +38,10 @@ body{
     }
 }
 
+.modal {
+    z-index: -3;
+}
+
 /*
  * LOGIN PAGE STYLING
  */
@@ -61,7 +65,7 @@ body{
  */
 
 #container {
-    width: 400%;
+    width: 300%;
 }
 
 .page {

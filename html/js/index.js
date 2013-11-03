@@ -104,6 +104,11 @@ $(function() {
         });
     });
 
+    $('body').on('click', '.option', function() {
+        var modal = $(this).attr('href');
+        $(modal).css('z-index', '1050')
+    });
+
     $('body').on('change', '.crash-updater', function() {
         var data = {};
         data[$(this).attr('name')] = $(this).val();

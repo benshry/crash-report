@@ -7,7 +7,6 @@
                 @include('templates.page-landing')
                 @include('templates.page-add')
                 @include('templates.page-browse')
-                @include('templates.page-vehicle')
             </div>
         </div>
         <!--<div id="webcam" style="height:500px"></div>-->
