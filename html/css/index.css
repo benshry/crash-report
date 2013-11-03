@@ -95,7 +95,8 @@ body {
 
 img#plus-img {
   width: 50px;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 /*
  * CRASH MODAL STYLINGS
