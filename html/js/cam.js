@@ -1,6 +1,3 @@
-function barcode_upload(b64) {
-}
-
 function error(errorId, errorMsg) {
     alert(errorId);
 }
@@ -15,13 +12,16 @@ function snapshot() {
 
 
 
-$(document).ready(function() {
+function initializeCamera() {
     $("#webcam").scriptcam({
         path: '/js/scriptcam/',
         onError: error,
-        width: 800,
-        height: 600,
-        onPictureAsBase64:barcode_upload
+        width: 400,
+        height: 300
     });
 
-});
+    $('#webcam').after($('<button id="take-picture">Scan</button>'));
+    $('#take-picture').on('click', function() {
+        snapshot();
+    });
+}

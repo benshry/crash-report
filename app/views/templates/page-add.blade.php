@@ -22,13 +22,15 @@
         </div>
     </div>
     <div class="row" id="plus">
-        <div class="option vehicle" id="option-add-vehicle" data-vehicle-num="1">
-            <h1>Vehicle 1</h1>
-            <div class="remove-option"><div class="remove-option-abs">X</div></div>
-            <div class="option-body">
-                <img src="/img/icon-car.png">
+        <span id="vehicles">
+            <div class="option vehicle" id="option-add-vehicle" data-vehicle-num="1">
+                <h1>Vehicle 1</h1>
+                <div class="remove-option"><div class="remove-option-abs">X</div></div>
+                <div class="option-body">
+                    <img src="/img/icon-car.png">
+                </div>
             </div>
-        </div>
+        </span>
         <img id="plus-img" src="/img/icon-plus.png">
     </div>
     <div class="row">

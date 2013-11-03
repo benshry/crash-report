@@ -10,6 +10,10 @@ class CrashController extends BaseController {
 
         Session::put('crash_id', $crash->id);
 
+        $vehicle = new Vehicle();
+        $vehicle->crash_id = $crash->id;
+        $vehicle->save();
+
         $this->jsonSuccess();
     }
 

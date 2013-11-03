@@ -17,4 +17,12 @@ Route::get('/crashes', 'CrashController@getAll');
 Route::post('/crash/update', 'CrashController@update');
 Route::post('/crash/new', 'CrashController@create');
 
+// VehicleController
+Route::get('/vehicle', 'VehicleController@get');
+Route::post('/vehicle/set', 'VehicleController@set');
+Route::get('/vehicles', 'VehicleController@getAll');
+Route::post('/vehicle/update', 'VehicleController@update');
+Route::post('/vehicle/delete', 'VehicleController@delete');
+Route::post('/vehicle/new', 'VehicleController@create');
+
 ?>

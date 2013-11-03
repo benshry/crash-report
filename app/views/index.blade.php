@@ -10,7 +10,6 @@
                 @include('templates.page-vehicle')
             </div>
         </div>
-        <!--<div id="webcam" style="height:500px"></div>-->
         @include('templates.modal-crashinfo')
         @include('templates.modal-cardamage')
         @include('templates.modal-crashdiagram')
@@ -23,7 +22,19 @@
             <script>
                 // hackishly go to second page if we have an active crash
                 $(document).on('ready', function() {
-                    $('#container').css('margin-left', "-100%");
+                    $.get('/vehicles/', function(data) {
+                        var page = 1;
+                        data = JSON.parse(data);
+
+
+                        $('#vehicles').empty();
+                        vehicleNum = 0;
+                        for (var i = 0; i < data.vehicles.length; i++) {
+                            addVehicle(data.vehicles[i].id);
+                        }
+                        var margin = -100 * page;
+                        $('#container').css('margin-left', margin + "%");
+                    });
                 });
             </script>
         @endif

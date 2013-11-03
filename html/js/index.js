@@ -1,5 +1,23 @@
 $(function() {
 
+    vehicleNum = 0;
+    addVehicle = function(id) {
+        vehicleNum++;
+        var div = $('<div class="option vehicle" data-vehicle-num="'+id+'">\
+            <h1>Vehicle '+vehicleNum+'</h1>\
+            <div class="remove-option"><div class="remove-option-abs">X</div></div>\
+            <div class="option-body">\
+                <img src="/img/icon-car.png">\
+            </div>\
+        </div>');
+
+        $('#vehicles').append(div);
+
+        //var plus = $('#plus-img');
+        //$('#plus-img').remove();
+        //plus.appendTo(row);
+    }
+
     /*
      * BROWSE PAGE EVENT HANDLERS
      */
@@ -22,8 +40,17 @@ $(function() {
         if (page == 1) {
             $.post('/crash/new', function(data) {
                 data = JSON.parse(data);
-                var margin = -100 * page;
-                $('#container').css('margin-left', margin + "%");
+                $.get('/vehicles/', function(data) {
+                    data = JSON.parse(data);
+
+                    $('#vehicles').empty();
+                    vehicleNum = 0;
+                    for (var i = 0; i < data.vehicles.length; i++) {
+                        addVehicle(data.vehicles[i].id);
+                    }
+                    var margin = -100 * page;
+                    $('#container').css('margin-left', margin + "%");
+                });
             });
         }
         else {
@@ -52,30 +79,34 @@ $(function() {
         $('#container').css('margin-left', 0);
     });
 
-    // sorry for the global
-    var vehicleNum = 1;
+    $('.back').on('click', '#back-img', function() {
+        $('#container').css('margin-left', '-100%');
+    });
+
     $('#plus').on('click', '#plus-img', function() {
-        var row = $(this).closest('.row');
-        var new_option = $('#option-add-vehicle').clone().appendTo(row);
-
-        vehicleNum++;
-        new_option.attr('data-vehicle-num', vehicleNum);
-        new_option.removeAttr('id');
-        new_option.find('h1').html('Vehicle ' + vehicleNum);
-
-        var plus = $('#plus-img');
-        $('#plus-img').remove();
-        plus.appendTo(row);
+        $.post('/vehicle/new', function(data) {
+            data = JSON.parse(data);
+            addVehicle(data.id);
+        });
     });
 
     $('#plus').on('click', '.vehicle', function() {
-        $('#container').css('margin-left', "-300%");
+
+        $.post('/vehicle/set', { vehicle_id: $(this).data('vehicle-num') }, function(data) {
+            $('#container').css('margin-left', "-300%");
+        });
     });
 
-    $('#plus').on('click', '.remove-option-abs', function() {
+    $('#plus').on('click', '.remove-option-abs', function(e) {
         var option = $(this).closest('.option');
-        if (parseInt(option.attr('data-vehicle-num')) != 1)
-            $(this).closest('.option').remove();
+        if ($('.vehicle').length === 1) {
+            return false;
+        }
+        var vehicle = $(this).closest('.option').data('vehicle-num');
+        $.post('/vehicle/delete', { id: vehicle }, function(data) {
+            $('[data-vehicle-num="' + vehicle + '"]').remove();
+        });
+        e.stopPropagation();
     });
 
     $('#modal-cardamage').on('click', '.nums h1', function() {
@@ -117,12 +148,30 @@ $(function() {
         });
     });
 
+    $('body').on('change', '.vehicle-updater', function() {
+        var data = {};
+        data[$(this).attr('name')] = $(this).val();
+        $.post('/vehicle/update', data, function(response) {
+            response = JSON.parse(response);
+        });
+    });
+
     $('body').on('shown.bs.modal', function(e) {
         if (e.target.id === 'modal-crashinfo' || e.target.id === 'modal-officer') {
             $.get('/crash', function(data) {
                 data = JSON.parse(data);
 
-                // poopulate the text boxes
+                // populate the text boxes
+                for (var i in data) {
+                    $('[name="' + i + '"]').val(data[i]);
+                }
+            });
+        }
+        else if (e.target.id === 'modal-driver' || e.target.id === 'model-vehicle' || e.target.id === 'model-owner') {
+            $.get('/vehicle', function(data) {
+                data = JSON.parse(data);
+
+                // populate the text boxes
                 for (var i in data) {
                     $('[name="' + i + '"]').val(data[i]);
                 }
@@ -148,6 +197,12 @@ $(function() {
             $('#map-canvas').css('height', '500px');
             initializeMap();
         }
+    });
+
+    $('body').on('click', '.open-webcam', function() {
+        $(this).closest('.modal-body').css('height', '600px');
+        $(this).closest('.modal-body').css('max-height', '600px');
+        initializeCamera();
     });
 
 });

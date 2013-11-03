@@ -20,6 +20,8 @@
         <input class="vehicle-updater" name="license_state" type="text" placeholder="State">
         <input class="vehicle-updater" name="license_dob" type="text" placeholder="DOB">
         <input class="vehicle-updater" name="license_expires" type="text" placeholder="Expiration">
+        <button class="open-webcam">Scan License</button>
+        <div id="webcam"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
