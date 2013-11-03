@@ -28,4 +28,28 @@ $(function() {
         plus.appendTo(row);
     });
 
+    $('#plus').on('click', '.remove-option-abs', function() {
+        var option = $(this).closest('.option');
+        if (parseInt(option.attr('data-vehicle-num')) != 1)
+            $(this).closest('.option').remove();
+    });
+
+    $('#modal-cardamage').on('click', '.nums h1', function() {
+        var selected = $(this).attr('data-selected');
+
+        /* TODO: 1 css call */
+        if (!selected || selected == 0) {
+            $(this).css('background-color', 'red');
+            $(this).css('color', 'white');
+            $(this).css('text-shadow', 'text-shadow: 0 -1px 1px rgba(0, 0, 0, .5)');
+            $(this).attr('data-selected', 1);
+        }
+        else {
+            $(this).css('background-color', '');
+            $(this).css('color', '');
+            $(this).css('text-shadow', '');
+            $(this).attr('data-selected', 0);
+        }
+    });
+
 });

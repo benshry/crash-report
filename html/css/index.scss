@@ -119,12 +119,38 @@ body{
     .option {
         vertical-align: middle;
     }
+
+    .option-body {
+        position: relative;
+        top: -10px;
+    }
 }
 
 img#plus-img {
     width: 50px;
     display: inline-block;
     cursor: pointer;
+}
+
+.remove-option {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    top: -56px;
+    left: 60px;
+    color: #4671D5;
+}
+
+.remove-option-abs {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.remove-option:hover {
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .5);
 }
 
 /*
@@ -141,4 +167,72 @@ img#plus-img {
 }
 #crash-killed {
     width: 75px;
+}
+
+#modal-cardamage {
+
+    .modal-body {
+        position: relative;
+        text-align: center;
+    }
+
+    img {
+        width: 350px;
+    }
+
+    .nums h1 {
+        width: 45px;
+        position: absolute;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #img-1 {
+        top: 20px;
+        left: 328px;
+    }
+    #img-2 {
+        top: 75px;
+        left: 390px;
+    }
+    #img-3 {
+        top: 155px;
+        left: 410px;
+    }
+    #img-4 {
+        top: 230px;
+        left: 389px;
+    }
+    #img-5 {
+        top: 285px;
+        left: 339px;
+    }
+    #img-6 {
+        top: 310px;
+        left: 258px;
+    }
+    #img-7 {
+        top: 293px;
+        left: 182px;
+    }
+    #img-8 {
+        top: 237px;
+        left: 124px;
+    }
+    #img-9 {
+        top: 157px;
+        left: 100px;
+    }
+    #img-10 {
+        top: 85px;
+        left: 110px;
+    }
+    #img-11 {
+        top: 29px;
+        left: 160px;
+    }
+    #img-12 {
+        top: 5px;
+        left: 250px;
+    }
 }

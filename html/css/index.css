@@ -92,11 +92,32 @@ body {
 
 #plus .option {
   vertical-align: middle; }
+#plus .option-body {
+  position: relative;
+  top: -10px; }
 
 img#plus-img {
   width: 50px;
   display: inline-block;
   cursor: pointer; }
+
+.remove-option {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  top: -56px;
+  left: 60px;
+  color: #4671D5; }
+
+.remove-option-abs {
+  position: absolute;
+  width: 40px;
+  height: 40px; }
+
+.remove-option:hover {
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5); }
 
 /*
  * CRASH MODAL STYLINGS
@@ -112,3 +133,50 @@ img#plus-img {
 
 #crash-killed {
   width: 75px; }
+
+#modal-cardamage .modal-body {
+  position: relative;
+  text-align: center; }
+#modal-cardamage img {
+  width: 350px; }
+#modal-cardamage .nums h1 {
+  width: 45px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 5px; }
+#modal-cardamage #img-1 {
+  top: 20px;
+  left: 328px; }
+#modal-cardamage #img-2 {
+  top: 75px;
+  left: 390px; }
+#modal-cardamage #img-3 {
+  top: 155px;
+  left: 410px; }
+#modal-cardamage #img-4 {
+  top: 230px;
+  left: 389px; }
+#modal-cardamage #img-5 {
+  top: 285px;
+  left: 339px; }
+#modal-cardamage #img-6 {
+  top: 310px;
+  left: 258px; }
+#modal-cardamage #img-7 {
+  top: 293px;
+  left: 182px; }
+#modal-cardamage #img-8 {
+  top: 237px;
+  left: 124px; }
+#modal-cardamage #img-9 {
+  top: 157px;
+  left: 100px; }
+#modal-cardamage #img-10 {
+  top: 85px;
+  left: 110px; }
+#modal-cardamage #img-11 {
+  top: 29px;
+  left: 160px; }
+#modal-cardamage #img-12 {
+  top: 5px;
+  left: 250px; }
