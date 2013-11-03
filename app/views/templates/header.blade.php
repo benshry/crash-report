@@ -1,3 +1,3 @@
 <div id="top">
-    <h1>Crash Reports</h1>
+    <h1>Crash Reporter</h1>
 </div>

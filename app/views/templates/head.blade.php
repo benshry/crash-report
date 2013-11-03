@@ -9,5 +9,5 @@
     {{ HTML::script('/js/map.js') }}
     {{ HTML::script('/js/cam.js') }}
     {{ HTML::script('/js/scriptcam/scriptcam.js') }}
-    <title>Crashr</title>
+    <title>Crash Reporter</title>
 </head>
