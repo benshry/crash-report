@@ -7,6 +7,7 @@
                 @include('templates.page-landing')
                 @include('templates.page-add')
                 @include('templates.page-browse')
+                @include('templates.page-vehicle')
             </div>
         </div>
         <!--<div id="webcam" style="height:500px"></div>-->
@@ -14,6 +15,9 @@
         @include('templates.modal-cardamage')
         @include('templates.modal-crashdiagram')
         @include('templates.modal-officer')
+        @include('templates.modal-vehicle')
+        @include('templates.modal-driver')
+        @include('templates.modal-owner')
 
         @if ($open_crash)
             <script>

@@ -60,11 +60,16 @@ $(function() {
 
         vehicleNum++;
         new_option.attr('data-vehicle-num', vehicleNum);
+        new_option.removeAttr('id');
         new_option.find('h1').html('Vehicle ' + vehicleNum);
 
         var plus = $('#plus-img');
         $('#plus-img').remove();
         plus.appendTo(row);
+    });
+
+    $('#plus').on('click', '.vehicle', function() {
+        $('#container').css('margin-left', "-300%");
     });
 
     $('#plus').on('click', '.remove-option-abs', function() {

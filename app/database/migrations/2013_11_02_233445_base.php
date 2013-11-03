@@ -65,7 +65,15 @@ class Base extends Migration {
                 $table->bigInteger('crash_id');
                 //$table->foreign('crash_id')->references('id')->on('crashes');
                 $table->string('vin');
-                $table->string('expires');
+                $table->string('make');
+                $table->string('model');
+                $table->string('color');
+                $table->string('year');
+                $table->string('plate');
+                $table->string('state');
+                $table->string('expiration');
+                $table->string('insurance_policy');
+                $table->string('insurance_code');
                 $table->string('driver_first');
                 $table->string('driver_initial');
                 $table->string('driver_last');
@@ -78,7 +86,7 @@ class Base extends Migration {
                 $table->string('license_state');
                 $table->string('license_number');
                 $table->string('license_dob');
-                $table->string('license_expires');
+                $table->string('license_expiration');
                 $table->boolean('same_owner');
                 $table->string('owner_first')->nullable();
                 $table->string('owner_initial')->nullable();

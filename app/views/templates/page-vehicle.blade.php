@@ -1,9 +1,9 @@
-<div class="page" id="add">
+<div class="page" id="vehicle">
     @include('templates.header')
+    hi
+    <!--
     <div class="row back">
-        <img class="back-img" src="/img/icon-back.png">
-        <div class="option" class="btn" data-toggle="modal" href="#modal-crashdiagram">
-            <h1>Crash Diagram</h1>
+            <h1>Crash2 Diagram</h1>
             <div class="option-body">
                 <img src="/img/icon-map.jpg">
             </div>
@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="row" id="plus">
-        <div class="option vehicle" id="option-add-vehicle" data-vehicle-num="1">
+        <div class="option option-add-vehicle" data-vehicle-num="1">
             <h1>Vehicle 1</h1>
             <div class="remove-option"><div class="remove-option-abs">X</div></div>
             <div class="option-body">
@@ -39,4 +39,5 @@
             </div>
         </div>
     </div>
+    -->
 </div>
