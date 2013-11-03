@@ -53,12 +53,12 @@ body {
  * LANDING PAGE STYLING
  */
 #container {
-  width: 300%; }
+  width: 400%; }
 
 .page {
   position: relative;
   display: inline-block;
-  width: 33.33%; }
+  width: 25%; }
 
 #landing {
   margin-left: 0px;
@@ -69,8 +69,12 @@ body {
   left: -4px; }
 
 #browse {
-  margin-left: 66.66%;
+  margin-left: 50%;
   top: -616px; }
+
+#vehicle {
+  margin-left: 75%;
+  top: -716px; }
 
 .page {
   text-align: center; }
