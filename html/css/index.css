@@ -69,9 +69,9 @@ body {
   margin-left: 66.66%;
   top: -616px; }
 
-#landing, #add, #browse {
+.page {
   text-align: center; }
-  #landing .option, #add .option, #browse .option {
+  .page .option {
     width: 200px;
     height: 150px;
     display: inline-block;
@@ -81,20 +81,32 @@ body {
     border-radius: 5px;
     vertical-align: top;
     cursor: pointer; }
-    #landing .option h1, #add .option h1, #browse .option h1 {
+    .page .option h1 {
       font-size: 18px;
       color: white;
       text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
       margin-top: 0px;
       background-color: #4671D5; }
-    #landing .option .option-body img, #add .option .option-body img, #browse .option .option-body img {
+    .page .option .option-body img {
       width: 80px; }
 
-#plus .option {
-  vertical-align: middle; }
-#plus .option-body {
+.back {
   position: relative;
-  top: -10px; }
+  left: -3.3%; }
+  .back .option {
+    vertical-align: middle; }
+  .back img.back-img {
+    width: 55px;
+    cursor: pointer; }
+
+#plus {
+  position: relative;
+  left: 2.5%; }
+  #plus .option {
+    vertical-align: middle; }
+  #plus .option-body {
+    position: relative;
+    top: -10px; }
 
 img#plus-img {
   width: 50px;

@@ -27,6 +27,9 @@ $(function() {
     /*
      * APP PAGE EVENT HANDLERS
      */
+    $('.back').on('click', 'img.back-img', function() {
+        $('#container').css('margin-left', 0);
+    });
 
     // sorry for the global
     var vehicleNum = 1;

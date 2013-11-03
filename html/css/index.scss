@@ -85,7 +85,7 @@ body{
     top: -616px;
 }
 
-#landing, #add, #browse{
+.page {
     text-align: center;
 
     .option {
@@ -115,7 +115,26 @@ body{
     }
 }
 
+.back {
+
+    position: relative;
+    left: -3.3%;
+
+    .option {
+        vertical-align: middle;
+    }
+
+    img.back-img {
+        width: 55px;
+        cursor: pointer;
+    }
+}
+
 #plus {
+
+    position: relative;
+    left: 2.5%;
+
     .option {
         vertical-align: middle;
     }
