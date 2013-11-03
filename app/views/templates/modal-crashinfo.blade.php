@@ -8,11 +8,11 @@
       </div>
       <div class="modal-body">
         <form>
-          <textarea id="crash-description" name="crash-description" type="text" placeholder="Crash Description"></textarea>
-          <textarea id="crash-damage" name="crash-damage" type="text" placeholder="Damage To Other Property"></textarea>
-          <input name="crash-location" type="text" placeholder="Location">
-          <input id="crash-injured" name="crash-injured" type="text" placeholder="Injured">
-          <input id="crash-killed" name="crash-killed" type="text" placeholder="Killed">
+          <textarea class="crash-updater" id="crash-description" name="description" type="text" placeholder="Crash Description"></textarea>
+          <textarea class="crash-updater" id="crash-damage" name="damage" type="text" placeholder="Damage To Other Property"></textarea>
+          <input class="crash-updater" name="location" type="text" placeholder="Location">
+          <input class="crash-updater" id="crash-injured" name="injured" type="text" placeholder="Injured">
+          <input class="crash-updater" id="crash-killed" name="killed" type="text" placeholder="Killed">
         </form>
       </div>
       <div class="modal-footer">
